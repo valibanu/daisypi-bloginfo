@@ -7,5 +7,5 @@ easy_install pip
 echo "Finished installing pip!"
 
 echo "Installing the rank_provider Python package ..."
-sudo pip install rank_provider
+pip install rank_provider
 echo "Finished installing rank_provider!"
