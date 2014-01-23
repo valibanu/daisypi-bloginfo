@@ -40,7 +40,7 @@ class ZelistRank(RankProvider):
 
 def get_zelist_rank(url):
     """
-    Print the Zelist Rank of a given page
+    Return the Zelist Rank of a given page
     @rtype : object
     @param url: full string of the URL (eg. http://www.nwradu.ro)
     """
@@ -48,9 +48,4 @@ def get_zelist_rank(url):
     page = urlparse.urlparse(url).hostname
     if 'www' in page:
         page = page[4:]
-
-    zelist_rank = ZelistRank().get_rank(page)
-    if zelist_rank:
-        print('Zelist Rank: {}'.format(zelist_rank))
-    else:
-        print('Blog "{}" not present in Zelist!'.format(page))
+    return ZelistRank().get_rank(page)
